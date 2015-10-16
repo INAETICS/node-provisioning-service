@@ -11,6 +11,3 @@ RUN cd /tmp \
 
 # Add resources
 ADD resources /tmp
-
-# Either uncomment this line, or map the bundles folder as a docker volume to /bundles when starting the container!
-#ADD bundles /bundles

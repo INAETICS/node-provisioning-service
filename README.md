@@ -3,6 +3,6 @@ Node Provisioning Service [![Build Status](https://travis-ci.org/INAETICS/node-p
 
 Run [Apache ACE Server] (https://ace.apache.org/) inside a Docker container.
 
-Be sure to either uncomment the "ADD bundles /bundles" line in the Dockerfile,
-or map the "bundles" folder as a docker volume to /bundles when starting the container! 
+The needed bundles and gosh script moved to a new repository, see https://github.com/inaetics/bundles.
+Be sure to map them as a docker volume to /bundles when starting the container! 
 
