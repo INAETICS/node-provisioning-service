@@ -9,4 +9,8 @@ before_install:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 
 install:
-  - docker build -t inaetics/node-provisioning . && docker push inaetics/node-provisioning
+  - docker build -t inaetics/node-provisioning . 
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" &&
+    docker push inaetics/node-provisioning
